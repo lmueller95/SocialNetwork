@@ -39,6 +39,37 @@ if (isset($_POST['register_button'])) {
     $password2 = strip_tags($_POST['reg_password2']);
 
     $date = date("d-m-Y");
+
+    if ($email == $email2) {
+        //Check if email is in valid format
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $email = filter_var($em, FILTER_VALIDATE_EMAIL);
+            //Check if email already exists
+            $email_check = mysqli_query($con, "SELECT email FROM Social WHERE email='$email'");
+            //Count the numbers of rows returned
+            $num_rows = mysqli_num_rows($email_check);
+
+            if ($num_rows > 0) {
+                echo "Email already in use";
+            }
+        } else {
+            echo "Invalid Form";
+        }
+    } else {
+        echo "Emails don´t match";
+    }
+
+    if (strlen($fname) > 25 || strlen($fname) < 2) {
+        echo "Your first name must be between 2 and 25 characters";
+    }
+
+    if (strlen($lname) > 25 || strlen($lname) < 2) {
+        echo "Your first name must be between 2 and 25 characters";
+    }
+
+    if ($password != $password2) {
+        echo "Your passwords do not match";
+    }
 }
 ?>
 
