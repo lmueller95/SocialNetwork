@@ -94,7 +94,11 @@ if (isset($_POST['register_button'])) {
             $username = $username . "_" . $i;
             $check_username_query = mysqli_query($con, "SELECT username FROM Social WHERE username = '$username'");
         }
-        echo 'alles gut';
+        $rand = rand(1,2);
+        if($rand === 1)
+            $profile_pic = "assets/profil_pic/head_carrot.png";
+        else if($rand === 2)
+            $profile_pic = "assets/profil_pic/head_green_sea.png";
     }
 }
 ?>
