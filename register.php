@@ -94,11 +94,25 @@ if (isset($_POST['register_button'])) {
             $username = $username . "_" . $i;
             $check_username_query = mysqli_query($con, "SELECT username FROM Social WHERE username = '$username'");
         }
-        $rand = rand(1,2);
-        if($rand === 1)
+        $rand = rand(1, 2);
+        if ($rand === 1) {
             $profile_pic = "assets/profil_pic/head_carrot.png";
-        else if($rand === 2)
-            $profile_pic = "assets/profil_pic/head_green_sea.png";
+        } else {
+            if ($rand === 2) {
+                $profile_pic = "assets/profil_pic/head_green_sea.png";
+            }
+        }
+
+        $query = mysqli_query(
+            $con,
+            "INSERT INTO Social VALUES ('', '$fname', '$username', '$fname', '$email', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')"
+        );
+        array_push($error_array, "<span>You´re all set! Go ahead and login<span><br>");
+        //Clear session variable
+        $_SESSION['reg_fname'] = "";
+        $_SESSION['reg_lname'] = "";
+        $_SESSION['reg_email'] = "";
+        $_SESSION['reg_email2'] = "";
     }
 }
 ?>
@@ -166,6 +180,10 @@ if (isset($_POST['register_button'])) {
         $error_array
     )) echo 'Your password must be betwen 5 and 30 characters<br>' ?>
     <input type="submit" name="register_button" value="Register">
+    <?php
+    if (in_array("<span>You´re all set! Go ahead and login<span><br>", $error_array)) {
+        echo "<span>You´re all set! Go ahead and login<span><br>";
+    } ?>
 </form>
 <script src="index.js"></script>
 </body>
