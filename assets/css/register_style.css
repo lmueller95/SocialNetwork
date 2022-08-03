@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Bellota-LightItalic';
+    src: url('../fonts/Bellota-LightItalic.otf')
+}
+
 form {
     text-align: center;
 }
@@ -25,4 +30,21 @@ body {
     border-radius: 7px;
     padding: 5px;
     opacity: 0.98;
+}
+
+.login_header {
+    width: 100%;
+    height: 90px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+}
+
+.login_header h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #2980b9;
 }
