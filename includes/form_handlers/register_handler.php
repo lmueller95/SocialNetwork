@@ -89,10 +89,10 @@ if (isset($_POST['register_button'])) {
         }
         $rand = rand(1, 2);
         if ($rand === 1) {
-            $profile_pic = "assets/profil_pic/head_carrot.png";
+            $profile_pic = "assets/images/profil_pic/head_carrot.png";
         } else {
             if ($rand === 2) {
-                $profile_pic = "assets/profil_pic/head_green_sea.png";
+                $profile_pic = "assets/images/profil_pic/head_green_sea.png";
             }
         }
 

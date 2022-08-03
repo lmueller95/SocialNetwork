@@ -1,0 +1,15 @@
+form {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background-image: url("../images/backgrounds/desktop.jpeg");
+    background-size: 100%;
+    width: 100%;
+    min-height: 950px;
+}
