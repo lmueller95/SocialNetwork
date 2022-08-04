@@ -1,2 +1,9 @@
 <?php
-echo "hallo";
+
+include("includes/header.php");
+session_destroy();
+?>
+Hallo!
+</body>
+</html>
+
