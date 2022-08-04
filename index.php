@@ -1,9 +1,9 @@
 <?php
 
-include("includes/header.php");
-//session_destroy();
+include 'includes/header.php';
+
 ?>
-Hallo!
+
 </body>
 </html>
 
