@@ -13,5 +13,8 @@ if (isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Swirlfeed</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 </head>
 <body>
