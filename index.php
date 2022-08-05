@@ -3,12 +3,14 @@
 include 'includes/header.php';
 ?>
 <div class="user_detail column">
-    <a href="'">
+    <a href="<?php
+    echo $userLoggedIn; ?>">
         <img src="<?php
         echo $user['profil_pic'] ?>">
     </a>
     <div class="user_details_left_right">
-        <a href="'">
+        <a href="<?php
+        echo $userLoggedIn; ?>">
             <?php
             echo $user['name'] . " " . $user['lastName'];
             ?>
