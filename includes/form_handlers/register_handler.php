@@ -98,7 +98,7 @@ if (isset($_POST['register_button'])) {
 
         $query = mysqli_query(
             $con,
-            "INSERT INTO Social VALUES ('', '$fname', '$username', '$fname', '$email', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')"
+            "INSERT INTO Social VALUES ('', '$fname', '$username', '$lname', '$email', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')"
         );
         array_push($error_array, "<span>You´re all set! Go ahead and login<span><br>");
         //Clear session variable
