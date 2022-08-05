@@ -33,3 +33,23 @@ body {
     color: #1086ba;
     text-decoration: none;
 }
+
+nav {
+    float: right;
+    right: 1px;
+    position: absolute;
+    margin: 10px;
+}
+
+nav a {
+    position: relative;
+    color: #efefef;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 3px;
+}
+
+nav a:hover {
+    border-bottom: 10px solid #e67e22;
+    color: #fff;
+}
