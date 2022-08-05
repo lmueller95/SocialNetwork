@@ -92,3 +92,26 @@ nav a:hover {
     border-radius: 5px;
     margin-right: 5px;
 }
+
+.main_column {
+    float: right;
+    width: 80%;
+    z-index: -1;
+    min-height: 160px;
+}
+
+.post_form {
+    width: 100%;
+}
+
+.post_form textarea {
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+}
+
+textarea:focus {
+    outline: 0;
+}
